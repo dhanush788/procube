@@ -1,28 +1,66 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-  font-family : neue montreal;
+  font-family: neue montreal;
 }
 
 @font-face {
-  font-family: 'neue montreal';
-  src: url('./font/NeueMontreal-Regular.otf') format('opentype');
+  font-family: "neue montreal";
+  src: url("./font/NeueMontreal-Regular.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
-.purplegradient{
-  background: linear-gradient(to bottom right , #9900FF 71%, #9900FF 100%);
+.purplegradient {
+  background: linear-gradient(to bottom right, #9900ff 71%, #9900ff 100%);
+}
+
+.clientsImgContainer {
+  margin-top: 11.904761904761903vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scrolling-logos {
+  display: flex;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+  gap: 4.9603174603174605vw;
+  /* animation-timing-function: linear;
+  transition: transform 0.8s ease; */
+}
+
+.logoClients {
+  width: max-content;
+  height: 2.4vw !important;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .clientsImgContainer {
+    margin-top: 16vw;
+  }
+
+  .scrolling-logos {
+    margin-top: 13px;
+    gap: 40px;
+  }
+
+  .logoClients {
+    height: 12vw !important;
+  }
 }
